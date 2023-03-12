@@ -1,6 +1,6 @@
 plugins {
     id(Plugins.Android.application)
-    id(Plugins.Kotlin.jetbrains)
+    id(Plugins.Kotlin.jetbrains) version Versions.kotlinVersion
     id(Plugins.Kotlin.kapt)
 }
 
@@ -54,7 +54,10 @@ dependencies {
 
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.material)
+
     implementation(Libs.Lifecycle.runtimeKtx)
+    implementation(Libs.Lifecycle.viewModelKtx)
+    implementation(Libs.Lifecycle.runtimeCompose)
 
     implementation(platform(Libs.Compose.composeBOM))
     implementation(Libs.Compose.composeActivity)
@@ -62,6 +65,8 @@ dependencies {
     implementation(Libs.Compose.composeUiPreview)
     debugImplementation(Libs.Compose.composeUiTooling)
     debugImplementation(Libs.Compose.composeUiTestManifest)
+    debugImplementation(Libs.Compose.composeMaterial)
+    debugImplementation(Libs.Compose.composeCoil)
 
     implementation(Libs.Navigation.runtimeKtx)
     implementation(Libs.Navigation.navigationCompose)

@@ -17,7 +17,7 @@ object Plugins {
 
 object Versions {
     const val gradlePluginVersion = "7.4.1"
-    const val kotlinVersion = "1.8.0"
+    const val kotlinVersion = "1.7.0"
     const val hiltVersion = "2.44"
 }
 
@@ -79,6 +79,7 @@ object Libs {
         const val compiler = "androidx.lifecycle:lifecycle-compiler:2.5.1"
         const val process = "androidx.lifecycle:lifecycle-process:2.5.1"
         const val coreTesting = "androidx.arch.core:core-testing:2.1.0"
+        const val runtimeCompose = "androidx.lifecycle:lifecycle-runtime-compose:2.6.0-beta01"
     }
 
     object Room {

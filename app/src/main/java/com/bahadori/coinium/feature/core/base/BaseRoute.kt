@@ -7,6 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.bahadori.coinium.feature.core.collectInLaunchedEffect
+import com.bahadori.coinium.feature.core.components.ErrorView
+import com.bahadori.coinium.feature.core.components.LoadingView
 import com.bahadori.coinium.feature.core.useBase
 
 @Composable

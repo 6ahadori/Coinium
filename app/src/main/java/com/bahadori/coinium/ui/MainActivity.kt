@@ -1,4 +1,4 @@
-package com.bahadori.coinium
+package com.bahadori.coinium.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
