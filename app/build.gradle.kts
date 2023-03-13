@@ -3,6 +3,7 @@ plugins {
     id(Plugins.Kotlin.jetbrains) version Versions.kotlinVersion
     id(Plugins.Kotlin.kapt)
     id(Plugins.Hilt.daggerHilt)
+    id(Plugins.Google.mapsPlatformSecrets)
 }
 
 android {
@@ -56,8 +57,6 @@ dependencies {
     implementation(Libs.Kotlin.stdlib)
 
     implementation(Libs.AndroidX.core)
-    implementation(Libs.AndroidX.material)
-
     implementation(Libs.Lifecycle.runtimeKtx)
     implementation(Libs.Lifecycle.viewModelKtx)
     implementation(Libs.Lifecycle.runtimeCompose)
@@ -80,7 +79,6 @@ dependencies {
 
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.compiler)
-    implementation(Libs.Hilt.fragment)
 
     implementation(Libs.Retrofit.retrofit)
     implementation(Libs.Retrofit.gsonConverter)

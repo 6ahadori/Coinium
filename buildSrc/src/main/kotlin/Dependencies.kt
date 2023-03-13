@@ -13,12 +13,18 @@ object Plugins {
         const val daggerHilt = "com.google.dagger.hilt.android"
     }
 
+    object Google {
+        const val mapsPlatformSecrets =
+            "com.google.android.libraries.mapsplatform.secrets-gradle-plugin"
+    }
+
 }
 
 object Versions {
     const val gradlePluginVersion = "7.4.1"
-    const val kotlinVersion = "1.7.0"
+    const val kotlinVersion = "1.8.0"
     const val hiltVersion = "2.44"
+    const val secretVersion = "2.0.1"
 }
 
 object Libs {
@@ -28,6 +34,7 @@ object Libs {
         const val appcompat = "androidx.appcompat:appcompat:1.6.1"
         const val material = "com.google.android.material:material:1.8.0"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+        const val fragment = "androidx.fragment:fragment:1.5.1"
     }
 
     object Kotlin {

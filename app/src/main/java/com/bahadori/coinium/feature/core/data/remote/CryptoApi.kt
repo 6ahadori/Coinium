@@ -12,9 +12,9 @@ interface CryptoApi {
     suspend fun getTopData(
         @Query("limit") limit: Int?,
         @Query("page") page: Int?,
-        @Query("tsym") tsym: String,
+        @Query("tsym") toSymbol: String,
         @Query("ascending") ascending: Boolean?,
         @Query("sign") sign: Boolean?,
-    ): Response<TopData>
+    ): TopData
 
 }
