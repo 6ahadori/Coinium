@@ -2,6 +2,7 @@ plugins {
     id(Plugins.Android.application)
     id(Plugins.Kotlin.jetbrains) version Versions.kotlinVersion
     id(Plugins.Kotlin.kapt)
+    id(Plugins.Hilt.daggerHilt)
 }
 
 android {
@@ -51,6 +52,8 @@ android {
 }
 
 dependencies {
+    implementation(Libs.Kotlin.stdlibJdk8)
+    implementation(Libs.Kotlin.stdlib)
 
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.material)
@@ -75,6 +78,14 @@ dependencies {
     androidTestImplementation(Libs.Test.junitExt)
     androidTestImplementation(Libs.Test.espressoCore)
 
+    implementation(Libs.Hilt.android)
+    kapt(Libs.Hilt.compiler)
+    implementation(Libs.Hilt.fragment)
+
+    implementation(Libs.Retrofit.retrofit)
+    implementation(Libs.Retrofit.gsonConverter)
+    implementation(Libs.Retrofit.gson)
+    implementation(Libs.Retrofit.loggingInterceptor)
 }
 
 

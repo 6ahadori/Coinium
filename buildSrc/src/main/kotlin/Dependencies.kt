@@ -30,6 +30,11 @@ object Libs {
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
     }
 
+    object Kotlin {
+        const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
+        const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+    }
+
     object Compose {
         const val kotlinCompilerExtensionVersion = "1.4.2"
         const val composeBOM = "androidx.compose:compose-bom:2023.01.00"
@@ -93,6 +98,7 @@ object Libs {
         const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
         const val gson = "com.squareup.retrofit2:converter-gson:2.9.0"
         const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.10.0"
+        const val gsonConverter = "com.squareup.retrofit2:converter-gson:2.9.0"
     }
 
     object Lottie {
