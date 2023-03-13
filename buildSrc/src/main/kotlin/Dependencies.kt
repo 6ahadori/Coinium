@@ -21,8 +21,8 @@ object Plugins {
 }
 
 object Versions {
-    const val gradlePluginVersion = "7.4.1"
-    const val kotlinVersion = "1.8.0"
+    const val gradlePluginVersion = "7.4.0"
+    const val kotlinVersion = "1.7.0"
     const val hiltVersion = "2.44"
     const val secretVersion = "2.0.1"
 }
