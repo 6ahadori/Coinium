@@ -1,5 +1,6 @@
 package com.bahadori.coinium.feature.core.data.remote
 
 object Endpoints {
-    const val TOP_DATA = "data/top/totalvolfull"
+    const val COINS = "coins/markets"
+    const val CHART = "coins/{id}/market_chart"
 }

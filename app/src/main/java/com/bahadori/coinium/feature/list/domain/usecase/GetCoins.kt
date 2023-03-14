@@ -15,15 +15,22 @@ class GetCoins(
 
     operator fun invoke(page: Int): Flow<Resource<List<Coin>>> = flow {
 
-        emit(Resource.Loading())
+        try {
+            emit(Resource.Loading())
 
-        val result = repository.getTopCoins(LOAD_COUNT, DEFAULT_SYMBOL, page)
-        val coins = result.getOrNull()
-
-        if (result.isSuccess && coins != null) {
+            val coins = repository.getCoins(
+                DEFAULT_SYMBOL,
+                null,
+                null,
+                LOAD_COUNT,
+                page,
+                null,
+                null
+            )
             emit(Resource.Success(coins))
-        } else {
-            emit(Resource.Error(result.exceptionOrNull()?.message ?: UNKNOWN_ERROR))
+
+        } catch (e: Throwable) {
+            emit(Resource.Error(e.message ?: UNKNOWN_ERROR))
         }
 
     }

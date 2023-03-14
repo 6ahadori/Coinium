@@ -4,6 +4,7 @@ import com.bahadori.coinium.feature.core.data.remote.CryptoApi
 import com.bahadori.coinium.feature.list.data.repository.CoinRepositoryImpl
 import com.bahadori.coinium.feature.list.domain.repository.CoinRepository
 import com.bahadori.coinium.feature.list.domain.usecase.CoinsUseCase
+import com.bahadori.coinium.feature.list.domain.usecase.GetChart
 import com.bahadori.coinium.feature.list.domain.usecase.GetCoins
 import dagger.Module
 import dagger.Provides
@@ -25,7 +26,8 @@ object CoinModule {
     @Singleton
     fun provideCoinUseCase(repository: CoinRepository): CoinsUseCase {
         return CoinsUseCase(
-            getCoins = GetCoins(repository)
+            getCoins = GetCoins(repository),
+            getChart = GetChart(repository),
         )
     }
 }

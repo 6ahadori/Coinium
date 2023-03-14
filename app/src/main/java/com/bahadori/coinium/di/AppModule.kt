@@ -3,7 +3,6 @@ package com.bahadori.coinium.di
 import com.bahadori.coinium.BuildConfig
 import com.bahadori.coinium.feature.core.data.remote.CryptoApi
 import com.bahadori.coinium.feature.core.data.remote.NetworkConstants
-import com.bahadori.coinium.feature.core.data.remote.interceptor.AuthorizationInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,7 +25,6 @@ object AppModule {
         httpClient.connectTimeout(NetworkConstants.TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(NetworkConstants.TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(NetworkConstants.TIMEOUT, TimeUnit.SECONDS)
-        httpClient.addInterceptor(AuthorizationInterceptor())
         httpClient.addInterceptor(
             HttpLoggingInterceptor()
                 .apply {

@@ -33,17 +33,6 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        CoroutineScope(Dispatchers.IO).launch {
-//            coinsUseCase.getCoins(0).onEach { resource ->
-//                when (resource) {
-//                    is Resource.Error -> Log.i(TAG, "GetCoins -> Error: ${resource.message}")
-//                    is Resource.Loading -> Log.i(TAG, "GetCoins -> Loading...")
-//                    is Resource.Success -> Log.i(TAG, "GetCoins -> Success: size:${resource.data?.size}")
-//                }
-//            }.launchIn(lifecycleScope)
-//        }
-
         setContent {
             CoiniumTheme {
 

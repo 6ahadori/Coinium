@@ -3,7 +3,6 @@ plugins {
     id(Plugins.Kotlin.jetbrains) version Versions.kotlinVersion
     id(Plugins.Kotlin.kapt)
     id(Plugins.Hilt.daggerHilt)
-    id(Plugins.Google.mapsPlatformSecrets)
 }
 
 android {
