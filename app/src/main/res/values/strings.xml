@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Coinium</string>
+    <string name="unexpected_error">Unfortunately an error occurred.\nTry again later.</string>
 </resources>

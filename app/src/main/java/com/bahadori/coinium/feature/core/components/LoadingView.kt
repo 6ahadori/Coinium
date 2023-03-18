@@ -1,10 +1,12 @@
 package com.bahadori.coinium.feature.core.components
+
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Scaffold
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -28,13 +30,12 @@ fun LoadingView(
     }
 }
 
+@ExperimentalMaterial3Api
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @ThemePreviews
 @Composable
 private fun LoadingViewPreview() {
     CoiniumTheme {
-        Scaffold {
-            LoadingView()
-        }
+        LoadingView()
     }
 }

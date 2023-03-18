@@ -1,28 +1,20 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.bahadori.coinium.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.material.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.lifecycleScope
-import com.bahadori.coinium.feature.core.util.common.Constants.TAG
-import com.bahadori.coinium.feature.core.util.common.Resource
-import com.bahadori.coinium.feature.list.domain.usecase.CoinsUseCase
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.bahadori.coinium.feature.core.base.BaseViewModel
+import com.bahadori.coinium.feature.core.navigation.AppNavHost
+import com.bahadori.coinium.feature.coin.domain.usecase.CoinsUseCase
 import com.bahadori.coinium.ui.theme.CoiniumTheme
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -35,7 +27,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CoiniumTheme {
+                var baseViewModel: BaseViewModel by remember {
+                    mutableStateOf(BaseViewModel())
+                }
+                val navController = rememberNavController()
+                val backStackEntry = navController.currentBackStackEntryAsState()
+                val currentScreenRoute = backStackEntry.value?.destination?.route
 
+                AppNavHost(
+                    navController = navController,
+                    modifier = Modifier,
+                    onProvideBaseViewModel = { viewModel ->
+                        baseViewModel = viewModel
+                    }
+                )
             }
         }
     }

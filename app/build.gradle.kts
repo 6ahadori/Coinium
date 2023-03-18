@@ -67,7 +67,9 @@ dependencies {
     debugImplementation(Libs.Compose.composeUiTooling)
     debugImplementation(Libs.Compose.composeUiTestManifest)
     debugImplementation(Libs.Compose.composeMaterial)
+    debugImplementation(Libs.Compose.composeMaterial3)
     debugImplementation(Libs.Compose.composeCoil)
+    debugImplementation(Libs.Compose.systemuicontroller)
 
     implementation(Libs.Navigation.runtimeKtx)
     implementation(Libs.Navigation.navigationCompose)
@@ -77,6 +79,7 @@ dependencies {
     androidTestImplementation(Libs.Test.espressoCore)
 
     implementation(Libs.Hilt.android)
+    implementation(Libs.Hilt.navigationCompose)
     kapt(Libs.Hilt.compiler)
 
     implementation(Libs.Retrofit.retrofit)

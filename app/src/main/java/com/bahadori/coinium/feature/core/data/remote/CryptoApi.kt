@@ -2,8 +2,8 @@ package com.bahadori.coinium.feature.core.data.remote
 
 import com.bahadori.coinium.feature.core.data.remote.Endpoints.CHART
 import com.bahadori.coinium.feature.core.data.remote.Endpoints.COINS
-import com.bahadori.coinium.feature.list.domain.model.ChartData
-import com.bahadori.coinium.feature.list.domain.model.Coin
+import com.bahadori.coinium.feature.coin.domain.model.ChartData
+import com.bahadori.coinium.feature.coin.domain.model.Coin
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

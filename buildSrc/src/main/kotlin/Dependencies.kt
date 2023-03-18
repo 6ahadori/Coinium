@@ -32,7 +32,6 @@ object Libs {
     object AndroidX {
         const val core = "androidx.core:core-ktx:1.9.0"
         const val appcompat = "androidx.appcompat:appcompat:1.6.1"
-        const val material = "com.google.android.material:material:1.8.0"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
         const val fragment = "androidx.fragment:fragment:1.5.1"
     }
@@ -50,8 +49,11 @@ object Libs {
         const val composeUiTooling = "androidx.compose.ui:ui-tooling"
         const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest"
         const val composeMaterial = "androidx.compose.material:material"
+        const val composeMaterial3 = "androidx.compose.material3:material3:1.1.0-alpha08"
         const val composeActivity = "androidx.activity:activity-compose:1.6.1"
         const val composeCoil = "io.coil-kt:coil-compose:2.2.2"
+        const val systemuicontroller =
+            "com.google.accompanist:accompanist-systemuicontroller:0.27.0"
     }
 
     object Navigation {
@@ -74,6 +76,7 @@ object Libs {
         const val android = "com.google.dagger:hilt-android:2.44"
         const val compiler = "com.google.dagger:hilt-compiler:2.44"
         const val fragment = "androidx.hilt:hilt-navigation-fragment:1.0.0"
+        const val navigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
         const val testing = "com.google.dagger:hilt-android-testing:2.44"
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:2.44"
     }
