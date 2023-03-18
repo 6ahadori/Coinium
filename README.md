@@ -18,7 +18,7 @@ This is an Android application that displays a list of cryptocurrencies along wi
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-repository
+git clone https://github.com/6ahadori/Coinium.git
 ```
 2. Import the project into Android Studio
 ```
