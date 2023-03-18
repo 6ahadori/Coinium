@@ -1,31 +1,25 @@
-@file:OptIn(ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)
 
 package com.bahadori.coinium.feature.coin.presentation
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
-import androidx.compose.material.rememberScaffoldState
 import androidx.compose.material3.*
-import androidx.compose.material3.TopAppBarDefaults.enterAlwaysScrollBehavior
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.bahadori.coinium.R
 import com.bahadori.coinium.feature.coin.domain.model.Coin
-import com.bahadori.coinium.feature.coin.presentation.ListContract.*
+import com.bahadori.coinium.feature.coin.presentation.ListContract.Event
 import com.bahadori.coinium.feature.coin.presentation.components.Coin
 import com.bahadori.coinium.feature.coin.presentation.components.CoinBottomSheet
 import com.bahadori.coinium.feature.core.base.BaseViewModel
@@ -35,6 +29,8 @@ import com.bahadori.coinium.feature.core.util.ext.justLoading
 import com.bahadori.coinium.feature.core.util.ext.refreshing
 import kotlinx.coroutines.launch
 
+@ExperimentalMaterialApi
+@ExperimentalMaterial3Api
 @Composable
 fun ListRoute(
     viewModel: ListViewModel = hiltViewModel(),
@@ -67,6 +63,8 @@ fun ListRoute(
     )
 }
 
+@ExperimentalMaterial3Api
+@ExperimentalMaterialApi
 @Composable
 private fun ListScreen(
     state: ListContract.State,
